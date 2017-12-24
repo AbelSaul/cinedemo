@@ -1,0 +1,190 @@
+/*la cajas son elementos en bloque osea uno debajo de otro encambio los enlaces son elementos en linea el cual tenemos que transformar
+en bloque para poder agregarle ancho*/
+
+/*CSS para el menu de navegacion  header*/
+	
+		/*Eliminamos los margenes y paddings que agrega el navegador por defecto*/
+		* {
+		  padding: 0;
+		  margin: 0;
+		}
+
+		/*Agregamos margenes inferiores a los parrafos*/
+		p {
+		  margin-bottom: 20px;
+		}
+	
+		header {
+		  background: rgba(0,0,0,1); /*Esto es para dar fondo de color negro al header*/
+		  width: 100%;
+		  /*truco para que el menú de navegación se quede fijo en pantalla consiste en aplicarle una propiedad llamada position:fixed; a nuestro elemento del header.*/
+		  position: fixed;
+		  /* z-index a nuestro header, con esto vamos a decirle que el menú se muestre por encima de los elementos como imágenes que se muestren en pantalla,*/
+		  z-index: 100;
+		}
+
+		nav {
+		  float: right; /* Desplazamos el nav hacia la derecha */
+		}
+		 
+		nav ul {
+		  list-style: none;/*quitamos el subrayado*/
+		  overflow: hidden; /* Limpiamos errores de float */
+		}
+		 
+
+		nav ul li {
+		  float: left;/*todo los elementos li hacemos correr hacia la izquierda*/
+		  font-family: Arial, sans-serif;
+		  font-size: 16px;
+		}
+		 
+		nav ul li a {
+		  display: block; /* Convertimos los elementos a en elementos bloque para manipular el padding */
+		  padding: 20px;
+		  color: #fff;
+		  text-decoration: none;
+		}
+		 
+		/*esto sirve poara que cuando pasa el mouse aparesca un fondo de color verde*/
+		nav ul li:hover {
+		  background: #3ead47;
+		}	
+
+		
+		/*Este clase le aplicaremos al div  para que sea un elemnto en lnea se pongo uno al lado del otro, perto tambien para que puedean ser un 
+		bloque que se pueda expander*/
+		.header_display{
+			display: inline-block;
+		}
+		
+/*CSS para el cuerpo section contenido wrapper*/
+		.contenido {
+		  padding-top: 60px;
+		}
+
+		.wrapper {
+		  width: 80%;/*ocupara el 80% de la pagina*/
+		  margin: auto;/*los margenes sera automatco*/
+		  overflow:hidden;
+		}	
+		
+
+/*CSS para lo vendria hacer el titulo de la pagina y la descripcion*/
+
+		.container {
+	    margin-right: auto;/*los margenes seran automaticos*/
+	    margin-left: auto;
+	    padding-left: 15px;
+	    padding-right: 15px;
+	    border: 1px solid #999;
+	    background: #000;/*modificar*/
+		}
+
+		.home-content {
+		    padding-top: 5px;/*esto es para que el h1 se vaya mas abajo*/
+		    padding-bottom: 30px;
+		    margin-top: 10px;/*para separar*/
+		    text-align: center;/*para centrar el h1*/
+		}
+
+		.home-content h1 {
+		    font-size: 2.75em;
+		    font-weight: 700;
+		    text-shadow: 0 2px 2px rgba(0,0,0,.4);
+		    margin-bottom: 30px;
+		    margin-top: 30px;
+			color: #fff;
+		}
+
+
+		/*todos los parrafos que son hijos de la clase .home-content*/
+		.home-content p {
+		    color: #ccc;
+		    margin: 0 auto;/*esto es para centra*/
+		    line-height: 21px;
+		    margin-bottom: 30px;
+		}
+	
+
+/*Este es CSS para el combo box*/
+
+		/*estilos para el combobox*/
+		select {
+		    color: #fff;
+		    background: #555;
+		    padding: 10px 13px!important;
+		    border: 1px solid #999;
+		
+		}
+
+		/*estilos para el boton*/
+		input {
+		    color: #fff;
+		    background: #5da93c;
+		    padding: 13px 13px!important;
+		    border: 1px solid #333;
+		}
+
+		
+		/*li es un elemento en bloque ocupa el 100%*/
+		.searchandfilter  li {
+
+		    list-style: none;
+		   	display: inline-block;/*que se ponga en linea pero que siga siendo un bloque*/
+		    padding-right: 10px;
+			
+		}
+		
+
+/*Este CSS es para el contenido de las peliculas*/
+		.contenido-peliculas{
+			height: 350px;
+			background: #000;
+			margin-bottom: 10px;
+		}
+
+		h2{
+			color:#fff;
+			text-align: center;
+			font-size: 20px;
+		}
+
+		.browse-movie{
+			background-color: rgba(19,25,4,.3);
+			border-radius: 3px;
+			border-color: #000;
+			float: left;
+			width: 250px;
+			margin-left: 15px;	
+			margin-top: 5px;
+		}
+
+		.img{
+			margin-top: 5px;
+			margin-left: 15px;
+			width: 220px;
+			height: 300px;
+		}
+
+/*Esto es para el aside*/
+
+	aside{
+		margin-top: 10px;
+		width: 30%;
+		background: #000;
+		float: left;
+	}
+
+/*ESTO CSS es para el pie de pagina*/
+
+		footer{
+			background-color: #123;
+			padding: 10px;
+			text-align: center;/*centramos el texto*/
+			color: #fff; 
+		}
+		footer a{
+			text-decoration: none;
+			color: #fff;
+		}
